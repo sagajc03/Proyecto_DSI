@@ -25,7 +25,7 @@
                     <li><a href="" class="text-decoration-none">Gobierno</a></li>
                     <li><a href="" class="text-decoration-none"><i class="bi bi-search"></i></a></li>
             </div>
-                    </header>
+            </header>
         </ul>
     </div>
     <!--Nav -->
