@@ -31,9 +31,46 @@
     <!--Fin Nav -->
     <!-- Medio-->
     <div class="container medioxd">
-        <div class="d-grid gap-2 col-6 mx-auto">
-            <a class="btn btn-primary" href="IniciarSesion.html" role="button">Iniciar Sesión</a>
+        <div class="row align-content-lg-start me">
+            <div class="col-6 ">
+                <h4 class="fw-bold">
+                    Acceso por contraseña
+                </h4>
+            </div>
+
+        </div>
+        <form action="ValidaAcceso.php" method="post">
+          <div class="row g-3 align-items-center text-end">
+            <div class="col-3">
+              <label for="inputRFC6" class="col-form-label fw-bold">RFC:</label>
+            </div>
+            <div class="col-6">
+              <input type="text" class="form-control" aria-labelledby="passwordHelpInline" name="RFC" placeholder="RFC">
+            </div>
           </div>
+        <div class="row g-3 align-items-center text-end">
+            <div class="col-3">
+              <label for="inputPassword6" class="col-form-label fw-bold">Contraseña:</label>
+            </div>
+            <div class="col-6">
+              <input type="password" class="form-control" aria-labelledby="passwordHelpInline" name="contrasena" placeholder="Contraseña">
+            </div>
+        </div>
+        <div class="row g-3 align-items-center text-end">
+            <div class="col-3">
+              <label for="inputRFC6" class="col-form-label fw-bold">e.firma portable:</label>
+            </div>
+            <div class="col-6">
+                <input class="form-control" type="text" placeholder="Clave dinámica" disabled>
+            </div>
+          </div>
+          <div class="row align-items-end text-end">
+            <div class="col-sm">
+              <button type="button" class="btn btn-outline-secondary">e.firma</button>
+              <button type="submit" class="btn btn-outline-danger">Enviar</button>
+            </div>
+        </div>
+        </form>
     </div>
     <!--Fin Medio-->
     

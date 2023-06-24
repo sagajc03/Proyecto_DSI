@@ -4,7 +4,6 @@
 *{
     margin: 0;
     padding: 0;
-
   }
   
   body,html{
@@ -27,7 +26,7 @@
     justify-content:center;
     align-items: center;
     width: 100%;
-    padding: 0px 20px;
+    padding: 0px 5%;
   }
   .headerp1{
     width: 45%;
@@ -103,15 +102,17 @@
     text-decoration: underline;
     cursor: pointer;
   }
-  .container
-  {
-    position: relative;
-    height: 280px;
-    
-  }
-  footer{
-    position:relative;
-    bottom:0px ;
-    background-color:#453C47 ;
-    color: white;
-  }
+ .medioxd{
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+ .medioxd a{
+    background-color: var(--main-bg-color);
+ }
+ .me{
+    padding: 10px 0px;
+ }
+ form div{
+    padding-bottom: 8px;
+ }
