@@ -17,7 +17,7 @@
     <div class="header">
         <ul class="nav">
             <header id="navigation" class="text-decoration-none">
-                    <div class="headerp1"><li><a href="" target="_blank" class="logo text-decoration-none">
+                    <div class="headerp1"><li><a href="index.html" target="_blank" class="logo text-decoration-none">
                         <img src="images/logoheader.svg" alt="logo">
                     </a></li></div>
                     <div class="headerp2">
