@@ -62,10 +62,14 @@
                     if ($Fila[5]=='U'){
                         print("Usuario");
                         header("Location: MenuUser.html");
+                        setcookie("usuario",$Fila[0],time() + (60*10));
+                        setcookie("tipo",$Fila[5],time() + (60*10));
                         die();
                     }else{
                         print("Admin");
                         header("Location: MenuAdmin.html");
+                        setcookie("usuario",$Fila[0],time() + (60*10));
+                        setcookie("tipo",$Fila[5],time() + (60*10));
                         die();
                     }
 

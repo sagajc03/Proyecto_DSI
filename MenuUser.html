@@ -31,13 +31,24 @@
     <!--Fin Nav -->
     <div class="container medioxd">
         <div class="d-grid gap-2 col-6 mx-auto">
-            <a class="btn btn-primary" href="GenerarComprobante.php" role="button">Generar Comprobante</a>
-        </div>
-        <div class="d-grid gap-2 col-6 mx-auto">
             <a class="btn btn-primary" href="ConsultaGeneral.php" role="button">Consulta de comprobantes creados</a>
         </div>
         <div class="d-grid gap-2 col-6 mx-auto">
-            <a class="btn btn-primary" href="EliminarCOmprobante.php" role="button">EliminarComprobantes</a>
+            <a class="btn btn-primary" href="EliminarComprobante.php" role="button">Eliminar Comprobantes</a>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <div class="row align-items-center">
+            <form action="GenerarComprobante.php" method="get">
+                    <div class="col-12">
+                        <input type="number" step="1" class="form-control" name="veces" placeholder="Escriba el número de conceptos a agregar en la generación de comprobante">
+                    </div>
+                    <div class="col-12">
+                        <a href="GenerarComprobante.php">
+                        <button class="btn btn-primary" type="submit">Generar Comprobante</button>
+                    </a>
+                    </div>
+            </form>
+        </div>
         </div>
     </div>
 </body>
