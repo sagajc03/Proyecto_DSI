@@ -77,9 +77,9 @@
     </table>
     <div class="d-grid gap-2 col-6 mx-auto">
             <div class="row align-items-center">
-            <form action="DescargarComprobante.php" method="get">
+            <form action="DescargarComprobante.php" method="post">
                     <div class="col-12">
-                        <input type="number" step="1" class="form-control" name="veces" placeholder="Escriba el número de comprobante">
+                        <input type="number" step="1" class="form-control" name="ID" placeholder="Escriba el número de comprobante">
                     </div>
                     <div class="col-12">
                         <button class="btn btn-primary" type="submit">Descargar comprobante</button>

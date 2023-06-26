@@ -75,7 +75,7 @@
                 (ClaveProdServ,Cantidad,ClaveUnidad,Descripcion,ValorUnitario,Importe,
                 ObjetoImp,NoIdentificacion,Unidad,Descuento)
                 VALUES('$producto[$i]','$cantidad[$i]','$unidad[$i]','$descripcion[$i]','$valorUnitario[$i]',
-                '$importeCo[$i]','$objImp[$i]','$numale','$unidad[$i]','$descuento[$i]');
+                '$importeCo[$i]','$objImp[$i]','','$unidad[$i]','$descuento[$i]');
                 ";
             $Result=Ejecutar($Con,$SQLC);
             $numO = mysqli_insert_id($Con);
@@ -95,7 +95,7 @@
         if (!$NFilas==1) {
             $SQLRI="INSERT INTO receptor
                 (RFC,Nombre,DomicilioFiscalReceptor,RegimenFiscalReceptor,UsoCFDI,RegimenFiscal)
-                VALUES('$rfc','$nombre','$codigo_postal_receptor','$regimen_fiscal_receptor','$numale',
+                VALUES('$rfc','$nombre','$codigo_postal_receptor','$regimen_fiscal_receptor','Gastos en general  ',
                 '$regimen_fiscal');
             ";
             $Result=Ejecutar($Con,$SQLRI);
