@@ -201,4 +201,5 @@ $pdf->Cell(2.5,.3,'Este documento es una representacion impresa de un CFDI',0,0,
 $pdf->Image('images/QR.png',.8,9,2,2);
 $filepath="FILES/$id.pdf";
 $pdf->Output('F',$filepath);
+header("Location: ConsultaGeneral.php");
 ?>
