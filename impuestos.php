@@ -3,7 +3,7 @@
         <label class="col-form-label fw-bold">Base:*</label>
     </div>
     <div class="col-2">
-        <input type="text" class="form-control" name="Base[]" placeholder="">
+        <input type="number" step="0.01" class="form-control" name="Base[]" placeholder="">
     </div>
     <div class="col-2 ">
         <label class="col-form-label fw-bold">Impuesto:*</label>
@@ -35,7 +35,7 @@
         <label class="col-form-label fw-bold">Importe:*</label>
     </div>
     <div class="col-2">
-        <input type="number" step="0.01" class="form-control" name="Descuento[]" placeholder="%" value="">
+        <input type="number" step="0.01" class="form-control" name="Importe[]" placeholder="%" value="">
     </div>
 </div>
 <hr>

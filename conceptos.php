@@ -43,11 +43,11 @@
         <label class="col-form-label fw-bold">Objeto de impuesto:</label>
     </div>
     <div class="col-4">
-        <select class="form-select" aria-label="Default select example">
+        <select name="ObjImpuesto[]" class="form-select">
             <option selected>Seleccione..</option>
-            <option value="No_objeto_de_impuesto">No objeto de impuesto</option>
-            <option value="Si_objeto_de_impuesto">Si objeto de impuesto</option>
-            <option value="Si_objeto_de_impuesto_y_no_desglose">Si objeto de impuesto y no obligado desglose</option>
+            <option value="No_objeto_de_impuesto" >No objeto de impuesto</option>
+            <option value="Si_objeto_de_impuesto" >Si objeto de impuesto</option>
+            <option value="Si_objeto_de_impuesto_y_no_desglose" >Si objeto de impuesto y no obligado desglose</option>
         </select>
     </div>
 </div>
