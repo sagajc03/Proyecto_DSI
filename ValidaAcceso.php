@@ -33,11 +33,35 @@
     $RFC=$_POST['RFC'];
     $Pwd=$_POST['contrasena'];
 
+   
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Verificar si se ha enviado un archivo
+    if (isset($_FILES['archivo']) && $_FILES['archivo']['error'] === UPLOAD_ERR_OK) {
+        $nombreArchivo = $_FILES['archivo']['name'];
+        $rutaTemporal = $_FILES['archivo']['tmp_name'];
+        $rutaDestino = 'llaves/' . $nombreArchivo;
+
+        // Mover el archivo a su ubicación definitiva
+        if (move_uploaded_file($rutaTemporal, $rutaDestino)) {
+            echo 'El archivo se ha cargado correctamente.';
+        } else {
+            echo 'Hubo un error al cargar el archivo.';
+        }
+        }    else {
+        echo 'No se ha seleccionado ningún archivo o hubo un error en la carga.';
+        }
+    }
+
+
+    $gestor=fopen($rutaDestino,"r");
+    $llave=fread($gestor,10);
+    fclose($gestor);
+
     include("Controlador.php");
     
     $Con=Conectar();
     $SQL = "SELECT *
-    FROM InicioSesion
+    FROM InicioSesion2
     WHERE RFC='$RFC'";
     
     //   $SQL = "SELECT u.UserID, e.RFC, u.contrasena, u.Estado, u.Bloqueo, u.tipo, u.Intentos
@@ -52,6 +76,10 @@
         $Fila=mysqli_fetch_row($Result);
         if($Pwd==$Fila[2]){
             print("Contraseña valida");
+            if($llave!=$Fila[7]){
+                header("Location: IniciarSesion.html");
+                die();
+            }
             if ($Fila[3]==1){
                 print("Cuenta activa");
                 if ($Fila[4]==0){

@@ -1,7 +1,7 @@
 <?php
 require('fpdf.php');
 include("Controlador.php"); 
-$id=$_POST['ID'];
+$id=$_GET['ID'];
 
 
 // SELECT e.RFC, e.Nombre, r.RFC, r.Nombre, r.DomicilioFiscalReceptor, r.RegimenFiscalReceptor, r.UsoCFDI,com.ComprobanteID, com.Serie, com.Codigo_Postal, com.Fecha, com.TipoDeComprobante, e.RegimenFiscal, com.Exportacion,con.ClaveProdServ, con.NoIdentificacion, con.cantidad, con.ClaveUnidad, con.Unidad, con.ValorUnitario,con.Importe, con.Descuento, con.ObjetoImp, con.Descripcion,com.Moneda, com.FormaPago, com.MetodoPago, com.SubTotal, com.Total 
@@ -223,7 +223,7 @@ $SQL="SELECT com.Version, com.Fecha, com.Sello, com.FormaPago, com.NoCertificado
     WHERE com.ComprobanteID = $id;";
 $Result=Ejecutar($Con,$SQL);
 $Fila=mysqli_fetch_row($Result);
-
+/*
 $texto='<?xml version="1.0" encoding="utf-8"?>
 <cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version='.$Fila[0].' Fecha="'.$Fila[1].'T'.$Hora.'" Sello="'.$Fila[2].'" FormaPago="'.$Fila[3].'" NoCertificado="'.$Fila[4].'" Certificado="'.$Fila[5].'" SubTotal="'.$Fila[6].'" Moneda="'.$Fila[7].'" Total="'.$Fila[8].'" TipoDeComprobante="'.$Fila[9].'" Exportacion="'.$Fila[10].'" MetodoPago="'.$Fila[11].'" LugarExpedicion="'.$Fila[12].'" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<cfdi:Emisor Rfc="'.$Fila[13].'" Nombre="'.$Fila[14].'" RegimenFiscal="'.$Fila[15].'" />
@@ -239,6 +239,7 @@ $path="FILES/$id.xml";
 $Manejador=fopen($path,"w"); // Crea el archivo
 fwrite($Manejador,$texto); // Trunca a 0
 fclose($Manejador);
+*/
 $R=Desconectar($Con);
 
 

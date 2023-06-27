@@ -43,6 +43,8 @@
         <th scope="col">Nombre o razón social</th>
         <th scope="col">Fecha</th>
         <th scope="col">Total</th>
+        <th scope="col">PDF</th>
+        <th scope="col">XML</th>
         </tr>
     </thead>
         <tbody>
@@ -66,28 +68,24 @@
                 $NFilas=mysqli_num_rows($Result);
 
                 for ($i=0; $i < $NFilas; $i++) {
+                    
                     $Registro=mysqli_fetch_row($Result);
+                    $enlacepdf="DescargarComprobante.php?ID=$Registro[0]";
+                    $enlacexml="HacerXML.php?ID=$Registro[0]";
                     echo   "<tr>";
                     echo   "<th scope='row'>$Registro[0]</th>";
                     echo   "<td>$Registro[1]</td>";
                     echo   "<td>$Registro[2]</td>";
                     echo   "<td>$Registro[3]</td>";
                     echo   "<td>$Registro[4]</td>";
+                    echo   "<td>$Registro[4]</td>";
+                    echo   "<td><a href=$enlacepdf>Ver PDF</a></td>";
+                    echo   "<td><a href=$enlacexml>Ver XML</a></td>";
                     echo   "</tr>";
                 }
             ?>
         </tbody>
     </table>
-    <div class="d-grid gap-2 col-6 mx-auto">
-            <div class="row align-items-center">
-            <form action="DescargarComprobante.php" method="post">
-                    <div class="col-12">
-                        <input type="number" step="1" class="form-control" name="ID" placeholder="Escriba el número de comprobante">
-                    </div>
-                    <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Descargar comprobante</button>
-                    </div>
-            </form>
-        </div>
+
     </body>
 </html>

@@ -238,6 +238,12 @@
     fclose($Manejador);
     $R=Desconectar($Con);
 
+    $filepdf="FILES/$id.pdf";
+    $filexml="FILES/$id.xml";
+
+    unlink($filepdf);
+    unlink($filexml);
+
     $SQL1="DELETE FROM comprobantes_conceptos
     WHERE ComprobanteID = $id;
     ;";

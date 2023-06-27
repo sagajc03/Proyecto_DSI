@@ -120,5 +120,5 @@
                 ";
         $Result=Ejecutar($Con,$SQLM);
         Desconectar($Con);
-        header("Location: MenuUser.html");
+        header("Location: MenuUser.php");
     ?>

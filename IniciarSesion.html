@@ -39,7 +39,7 @@
             </div>
 
         </div>
-        <form action="ValidaAcceso.php" method="post">
+        <form action="ValidaAcceso.php" method="post" enctype="multipart/form-data">
           <div class="row g-3 align-items-center text-end">
             <div class="col-3">
               <label for="inputRFC6" class="col-form-label fw-bold">RFC:</label>
@@ -58,10 +58,10 @@
         </div>
         <div class="row g-3 align-items-center text-end">
             <div class="col-3">
-              <label for="inputRFC6" class="col-form-label fw-bold">e.firma portable:</label>
+              <label class="col-form-label fw-bold">e.firma portable:</label>
             </div>
             <div class="col-6">
-                <input class="form-control" type="text" placeholder="Clave dinámica" disabled>
+                <input class="form-control" type="file" placeholder="Clave dinámica" name="archivo">
             </div>
           </div>
           <div class="row align-items-end text-end">
