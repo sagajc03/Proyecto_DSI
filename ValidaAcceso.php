@@ -61,13 +61,13 @@
                     $Result=Ejecutar($Con,$SQL4);
                     if ($Fila[5]=='U'){
                         print("Usuario");
-                        header("Location: MenuUser.html");
+                        header("Location: MenuUser.php");
                         setcookie("usuario",$Fila[0],time() + (60*10));
                         setcookie("tipo",$Fila[5],time() + (60*10));
                         die();
                     }else{
                         print("Admin");
-                        header("Location: MenuAdmin.html");
+                        header("Location: MenuAdmin.php");
                         setcookie("usuario",$Fila[0],time() + (60*10));
                         setcookie("tipo",$Fila[5],time() + (60*10));
                         die();
@@ -75,9 +75,11 @@
 
 
                 }else{
+                    header("Location: IniciarSesion.html");
                     //Bloquedo
                 }
             }else{
+                header("Location: IniciarSesion.html");
                 //Cuenta inactiva
             }
         }else{
@@ -88,9 +90,11 @@
                 $SQL3="UPDATE usuarios SET Bloqueo=1 WHERE EmisorID='$Fila[0]';";
                 $Result=Ejecutar($Con,$SQL3);
             }
+            header("Location: IniciarSesion.html");
         }
     }else{
         print("El usuario NO existe");
+        header("Location: IniciarSesion.html");
     }
     
     

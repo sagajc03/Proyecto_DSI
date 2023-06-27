@@ -35,7 +35,7 @@
         <label class="col-form-label fw-bold">Descuento:</label>
     </div>
     <div class="col-2">
-        <input type="number" step="0.01" class="form-control" name="Descuento[]" placeholder="%" value="">
+        <input type="number" step="0.01" class="form-control" name="Descuento[]" placeholder="%" value="0">
     </div>
 </div>
 <div class="row align-items-end text-end">

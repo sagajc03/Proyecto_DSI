@@ -34,7 +34,7 @@
         </ul>
     </div>
     <!--Fin Nav -->
-
+    <a href="borrarcookie.php">Salir</a>
     <table class="table">
     <thead>
         <tr>
@@ -48,7 +48,10 @@
         <tbody>
             <?php
                 $emisor=$_COOKIE['usuario'];
-                
+                if (!$emisor) {
+                    header("Location: index.html");
+                }
+
                 include("Controlador.php");
                 $Con=Conectar();
                 $SQL="SELECT *  FROM vista_ami

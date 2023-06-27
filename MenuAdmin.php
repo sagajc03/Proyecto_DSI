@@ -29,6 +29,17 @@
         </ul>
     </div>
     <!--Fin Nav -->
+    <a href="borrarcookie.php">Salir</a>
+    <?php
+        $tipo=$_COOKIE['tipo'];
+        $usuario=$_COOKIE['usuario'];
+        if (!$usuario) {
+            header("Location: index.html");
+        }
+        if($_COOKIE['tipo']!='A'){
+            header("Location: index.html");
+        }
+    ?>
     <div class="container medioxd">
         <div class="d-grid gap-2 col-6 mx-auto">
             <a class="btn btn-primary" href="ConsultaGeneral.php" role="button">Consulta de comprobantes creados</a>

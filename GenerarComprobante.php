@@ -34,6 +34,7 @@
         </ul>
     </div>
     <!--Fin Nav -->
+    <a href="borrarcookie.php">Salir</a>
     <?php
         if($_COOKIE['tipo']!='U'){
             header("Location: index.html");

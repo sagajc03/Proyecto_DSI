@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version=4.0 Fecha="2023-07-03T06:42:54" Sello="No hay" FormaPago="" NoCertificado="No hay" Certificado="No se" SubTotal="144.00" Moneda="Peso Mexicano" Total="156.00" TipoDeComprobante="Comprobante" Exportacion="Sepa la bola" MetodoPago="" LugarExpedicion="1234" xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<cfdi:Emisor Rfc="ZORO1478R1" Nombre="ZOROTO COMPOSO" RegimenFiscal="Uno que no conozco" />
+	<cfdi:Receptor Rfc="SDASADA4521" Nombre="Salazar" DomicilioFiscalReceptor="12345" RegimenFiscalReceptor="Confianza" UsoCFDI="1537728424" />
+	<cfdi:Conceptos>
+	<cfdi:Concepto ClaveProdServ="Muerte" Cantidad="12" ClaveUnidad="15" Unidad="15" Descripcion="muchas cosas" ValorUnitario="12" Importe="144" ObjetoImp="Si_objeto_de_impuesto" />
+	</cfdi:Conceptos>
+	<cfdi:Complemento>
+	<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="C9E7EC04-6095-45E3-ABC0-D5644D3C12D7" FechaTimbrado="2023-01-07T11:36:20" RfcProvCertif="SAT970701NN3" SelloCFD="F/HoYaFbTjWYvXdjQOtyCFm7MsRgRj/T4XO11mhIGFlD5wQaAu+hIBPk7hkfglIrVPuzvRWLDtwSV9b18rir817IeMytBfpO3VSJtnOqKSgaK38iip7oJCWPxE5KkhuIGsEbGojNXOp4yqt0udjjasnnPRJT1JpvAXMf8IdQzg6bxaNC7QSBoxDDrvc9IDGuURaO3JZ/eK6unik+g7Rf6GaJIvqZ6dPfYiITs3yMHzwzIucVRaBQ8AdJw51d8tXbUmhFYCcdp0ig0FG8hd30ylirxKcVHjXEF6UmJAF3YarInGbn4He3X8rZM73BGNCPL6xz1j7qIuyR5Wnq6enE8A==" NoCertificadoSAT="00001000000504465028" SelloSAT="PdOwOpNVaV7wtY/Ybwjn/lr3o9Q2ASPBNbB1K/2X1+yb1lQRaFVNsq4KL7pF6sW3Mu/sOU351RzM5yEogbwO6LW3rDLCz5CHpDRB4uEh+dfUqGpjKhtILyCVHuKjapq5H/0JoqMTArDkwd2A8Rif0AL0QWbbUWDYkLgmfFkDBlXK4I/7CvkIIWmCXJNRe7hGd/p4SivSpexdJzsKxWoxOwFFnyBvzFVzpOJEztnZuktQBKg2nF7uG8beEFX1ANWH1FUXj4B1aN3R4VHlD6IiiCoWwP3htQDgPcDFgHD1ekRsavgnINqJBZF1oRtBL79eu92Jz2EyEw/6Y4mCW5WBlA==" />
+	</cfdi:Complemento>
+</cfdi:Comprobante>
